@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Organizador</title>
+</head>
+<body>
+    <h1>Crear un nuevo organizador</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'lista_organizadores' %}">Ir a la lista de organizadores</a>
+</body>
+</html>

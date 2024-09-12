@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Organizador</title>
+</head>
+<body>
+    <h1>Eliminar Organizador</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>¿Estás seguro de que quieres eliminar a {{ organizador.nombre }}?</p>
+        <button type="submit">Eliminar</button>
+    </form>
+    <br>
+    <a href="{% url 'lista_organizadores' %}">Regresar a la lista de organizadores</a> 
+    <a href="{% url 'dashboard' %}">Regresar al Menú Principal</a> 
+</body>
+</html>

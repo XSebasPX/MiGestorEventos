@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear Evento</button>
+    <a href="{% url 'lista_eventos' %}" class="btn btn-secondary">Ir a la lista de eventos</a>
+</form>

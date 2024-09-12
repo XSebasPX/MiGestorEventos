@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Organizadores</title>
+</head>
+<body>
+    <h1>Lista de Organizadores</h1>
+    <ul>
+        {% for organizador in organizadores %}
+            <li>
+                {{ organizador.nombre }} - {{ organizador.email }}
+                <a href="{% url 'editar_organizador' organizador.id %}">Editar</a>
+                <a href="{% url 'eliminar_organizador' organizador.id %}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_organizador' %}">Crear un nuevo organizador</a>
+    <br>
+    <a href="{% url 'dashboard' %}">Regresar al Menú Principal</a> 
+</body>
+</html>
